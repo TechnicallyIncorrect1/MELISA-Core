@@ -1,0 +1,19 @@
+# MELISA Core default configuration
+
+app:
+  name: "MELISA Core"
+  version: "0.1.0"
+  environment: "development"
+
+monitor:
+  default_interval: 10
+  max_processes: 15
+  max_connections: 30
+
+intel:
+  cisa_kev_url: "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  timeout_seconds: 30
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
