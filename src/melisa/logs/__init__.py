@@ -1,1 +1,1 @@
-"""Log analysis modules."""
+"""Package init."""

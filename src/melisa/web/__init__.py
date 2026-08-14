@@ -1,1 +1,1 @@
-"""Web dashboard modules."""
+"""Package init."""
