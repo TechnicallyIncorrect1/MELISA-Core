@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "melisa-core"
-version = "0.1.0"
+version = "0.2.0"
 description = "Local Defensive Cybersecurity Agent"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -23,8 +23,16 @@ dependencies = [
     "uvicorn>=0.27.0",
 ]
 
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+windows = ["pywin32>=306"]
+
 [project.scripts]
 melisa = "melisa.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
