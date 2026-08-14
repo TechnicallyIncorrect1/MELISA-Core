@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "melisa-core"
+version = "0.1.0"
+description = "Local Defensive Cybersecurity Agent"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Francisco Ruberki González Tejeda", email = "frank2025da@gmail.com"}
+]
+dependencies = [
+    "psutil>=5.9.0",
+    "requests>=2.31.0",
+    "rich>=13.7.0",
+    "pyyaml>=6.0.1",
+    "click>=8.1.7",
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.0",
+]
+
+[project.scripts]
+melisa = "melisa.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
